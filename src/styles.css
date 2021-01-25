@@ -1,0 +1,60 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  height: 100vh;
+}
+
+.editor {
+  resize: none;
+  border: none;
+  background: black;
+  color: white;
+  padding: 2em;
+}
+
+.preview-wrapper {
+  padding: 2em;
+}
+
+/* p {
+  line-height: 1.5;
+} */
+
+pre {
+  background: #ececf1;
+  padding: 1em;
+  border-radius: 4px;
+  max-width: 100%;
+  overflow: auto;
+}
+
+p > code {
+  background-color: #ececf1;
+  padding: 0.25em;
+  border-radius: 4px;
+}
+
+blockquote {
+  color: #666;
+  margin: 0;
+  padding-left: 2em;
+  border-left: 0.5em #eee solid;
+}
+
+@media (max-width: 800px) {
+  .App {
+    grid-template-rows: 50% 1fr;
+    grid-template-columns: 1fr;
+  }
+}
